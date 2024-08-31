@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .game-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        .choice img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            object-fit: cover;
+        }
+        .choice img:hover {
+            transform: scale(1.1);
+            border: 5px solid black;
+        }
+        .score{
+            display: flex;
+            gap: 50px;
+        }
+        .result{
+            padding: 20px;
+            background-color: black;
+            margin-top: 50px;
+            color: white;
+            font-size: 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Rock, Paper, Scissors Game</h1>
+    </div>
+    <div class="game-container">
+        <div class="choice" id="rock" onclick="rock">
+            <img src="rock.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="Paper">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="scissors.png" alt="Scissors">
+        </div>
+    </div>
+    <div class="score">
+        <div class="comp">
+            <p id="compscore"></p>
+            <p>comp score</p></div>
+            <div class="user">
+                <p id="userscore"></p>
+                <p>user score</p>
+            
+        </div>
+    </div>
+    <div class="result">click on rock,paper or scissor to start</div>
+</body>
+</script><script src="script.js"></script>
+</html>
